@@ -7,5 +7,6 @@
 
 ## Please fill in your project documentation in this README.md file 
 
+Used RTL files from the repository: https://github.com/alexforencich/verilog-ethernet
 
 Refer to [README](docs/source/index.rst) for this sample project documentation. 
