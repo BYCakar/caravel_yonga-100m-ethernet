@@ -13,6 +13,4 @@ YONGA-100M Ethernet is based on the implementation of Alex Forencich's 100Mbps E
 - Abdullah Yildiz
 - Burak Yakup Cakar
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales rutrum orci, nec mattis tortor suscipit id. Fusce blandit scelerisque sollicitudin. Cras scelerisque ligula erat, eget gravida sapien eleifend at. Vestibulum enim mauris, tincidunt id sapien suscipit, vestibulum pulvinar orci. Nullam egestas, enim eu sagittis euismod, mi ipsum rutrum augue, ut cursus mauris elit at sapien. Praesent vel pretium est, a venenatis quam. Vivamus tristique diam risus, in pellentesque lacus posuere a. Donec quis semper justo. Nunc elementum ac urna vitae condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sem odio, fermentum nec molestie a, ornare nec libero. 
-
 Refer to [README](docs/source/index.rst) for this sample project documentation. 
