@@ -244,6 +244,8 @@ arp_cache_inst (
     .write_request_ip(cache_write_request_ip_reg),
     .write_request_mac(cache_write_request_mac_reg),
     // Configuration
+    .local_mac(local_mac),
+    .local_ip(local_ip),
     .clear_cache(clear_cache)
 );
 
@@ -317,7 +319,7 @@ always @* begin
                     outgoing_arp_oper_next = ARP_OPER_INARP_REPLY;
                     outgoing_arp_tha_next = incoming_arp_sha;
                     outgoing_arp_tpa_next = incoming_arp_spa;
-                end 
+                end
             end
         end
     end
@@ -447,4 +449,3 @@ always @(posedge clk) begin
 end
 
 endmodule
-

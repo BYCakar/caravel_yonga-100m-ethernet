@@ -59,6 +59,9 @@ module arp_cache #(
     /*
      * Configuration
      */
+
+    input  wire [47:0] local_mac,
+    input  wire [31:0] local_ip,
     input  wire        clear_cache
 );
 
@@ -224,27 +227,26 @@ always @(posedge clk) begin
         wr_ptr_reg <= wr_ptr_next;
 
         query_response_error_reg <= query_response_error_next;
-    
+
         if (store_query) begin
             query_ip_reg <= query_request_ip;
         end
-    
+
         if (store_write) begin
             write_ip_reg <= write_request_ip;
             write_mac_reg <= write_request_mac;
         end
-    
+
         rd_ptr_reg <= rd_ptr_next;
-    
+
         query_response_mac_reg <= mac_addr_mem[rd_ptr_reg];
-    
+
         if (mem_write) begin
-            valid_mem[wr_ptr_reg] <= !clear_cache_reg;
-            ip_addr_mem[wr_ptr_reg] <= write_ip_reg;
-            mac_addr_mem[wr_ptr_reg] <= write_mac_reg;
+            valid_mem[wr_ptr_reg] <= (wr_ptr_reg == 0) ? 1'b1 : !clear_cache_reg; //(wr_ptr_reg == 0) ? 1'b1 :
+            ip_addr_mem[wr_ptr_reg] <= (wr_ptr_reg == 0) ? local_ip : write_ip_reg; //(wr_ptr_reg == 0) ? local_ip :
+            mac_addr_mem[wr_ptr_reg] <= (wr_ptr_reg == 0) ? local_mac : write_mac_reg; //(wr_ptr_reg == 0) ? local_mac :
         end
     end
 end
 
 endmodule
-

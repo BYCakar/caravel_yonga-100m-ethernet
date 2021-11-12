@@ -1,0 +1,232 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO ethernet_100m
+  CLASS BLOCK ;
+  FOREIGN ethernet_100m ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 896.400 BY 907.120 ;
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 892.400 459.720 896.400 460.320 ;
+    END
+  END clk
+  PIN phy_rx_clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 392.010 903.120 392.290 907.120 ;
+    END
+  END phy_rx_clk
+  PIN phy_rx_dv
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 603.610 0.000 603.890 4.000 ;
+    END
+  END phy_rx_dv
+  PIN phy_rx_er
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 593.490 903.120 593.770 907.120 ;
+    END
+  END phy_rx_er
+  PIN phy_rxd[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END phy_rxd[0]
+  PIN phy_rxd[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 594.360 4.000 594.960 ;
+    END
+  END phy_rxd[1]
+  PIN phy_rxd[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 200.650 0.000 200.930 4.000 ;
+    END
+  END phy_rxd[2]
+  PIN phy_rxd[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 805.090 0.000 805.370 4.000 ;
+    END
+  END phy_rxd[3]
+  PIN phy_tx_clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 296.520 4.000 297.120 ;
+    END
+  END phy_tx_clk
+  PIN phy_tx_en
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 892.400 757.560 896.400 758.160 ;
+    END
+  END phy_tx_en
+  PIN phy_txd[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 794.970 903.120 795.250 907.120 ;
+    END
+  END phy_txd[0]
+  PIN phy_txd[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 402.130 0.000 402.410 4.000 ;
+    END
+  END phy_txd[1]
+  PIN phy_txd[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 892.200 4.000 892.800 ;
+    END
+  END phy_txd[2]
+  PIN phy_txd[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 191.450 903.120 191.730 907.120 ;
+    END
+  END phy_txd[3]
+  PIN rst
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 892.400 163.240 896.400 163.840 ;
+    END
+  END rst
+  PIN vccd1
+    DIRECTION INPUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 174.640 10.640 176.240 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 328.240 10.640 329.840 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 481.840 10.640 483.440 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 635.440 10.640 637.040 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 789.040 10.640 790.640 895.120 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INPUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 97.840 10.640 99.440 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 251.440 10.640 253.040 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 405.040 10.640 406.640 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 558.640 10.640 560.240 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 712.240 10.640 713.840 895.120 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 865.840 10.640 867.440 895.120 ;
+    END
+  END vssd1
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 895.015 894.965 ;
+      LAYER met1 ;
+        RECT 0.070 10.240 895.075 895.120 ;
+      LAYER met2 ;
+        RECT 0.100 902.840 191.170 903.120 ;
+        RECT 192.010 902.840 391.730 903.120 ;
+        RECT 392.570 902.840 593.210 903.120 ;
+        RECT 594.050 902.840 794.690 903.120 ;
+        RECT 795.530 902.840 887.240 903.120 ;
+        RECT 0.100 4.280 887.240 902.840 ;
+        RECT 0.650 4.000 200.370 4.280 ;
+        RECT 201.210 4.000 401.850 4.280 ;
+        RECT 402.690 4.000 603.330 4.280 ;
+        RECT 604.170 4.000 804.810 4.280 ;
+        RECT 805.650 4.000 887.240 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 893.200 892.400 895.045 ;
+        RECT 4.400 891.800 892.400 893.200 ;
+        RECT 4.000 758.560 892.400 891.800 ;
+        RECT 4.000 757.160 892.000 758.560 ;
+        RECT 4.000 595.360 892.400 757.160 ;
+        RECT 4.400 593.960 892.400 595.360 ;
+        RECT 4.000 460.720 892.400 593.960 ;
+        RECT 4.000 459.320 892.000 460.720 ;
+        RECT 4.000 297.520 892.400 459.320 ;
+        RECT 4.400 296.120 892.400 297.520 ;
+        RECT 4.000 164.240 892.400 296.120 ;
+        RECT 4.000 162.840 892.000 164.240 ;
+        RECT 4.000 10.715 892.400 162.840 ;
+      LAYER met4 ;
+        RECT 96.895 40.295 97.440 892.665 ;
+        RECT 99.840 40.295 174.240 892.665 ;
+        RECT 176.640 40.295 251.040 892.665 ;
+        RECT 253.440 40.295 327.840 892.665 ;
+        RECT 330.240 40.295 404.640 892.665 ;
+        RECT 407.040 40.295 481.440 892.665 ;
+        RECT 483.840 40.295 558.240 892.665 ;
+        RECT 560.640 40.295 635.040 892.665 ;
+        RECT 637.440 40.295 711.840 892.665 ;
+        RECT 714.240 40.295 788.640 892.665 ;
+        RECT 791.040 40.295 840.585 892.665 ;
+  END
+END ethernet_100m
+END LIBRARY
+
