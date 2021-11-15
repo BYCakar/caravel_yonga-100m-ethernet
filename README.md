@@ -26,7 +26,7 @@ Running Simulation
 
 ### GPIO Test
 
-* This test is meant to verify that we can send and receive data from YONGA-100M Ethernet through the WISHBONE port. The firmware sends a UDP frame to YONGA-100M Ethernet, then receives a response from YONGA-100M Ethernet.
+* This test is meant to verify that we can send and receive data from YONGA-100M Ethernet through GPIO pins. The firmware sends a UDP frame to YONGA-100M Ethernet, then receives a response from YONGA-100M Ethernet.
 
 To run RTL simulation, 
 
